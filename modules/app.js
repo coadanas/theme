@@ -1,10 +1,9 @@
 const http = require("http");
 const express = require("express");
 const app = express();
-const port = 5263;
+const port = 80;
 const hbs = require("hbs");
 const path = require("path");
-const hostname = "127.0.0.1";
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
@@ -17,7 +16,7 @@ app.use(bodyParser.urlencoded({
 // ==== HOST NAME ====
 const server = http.createServer(app);
 
-server.listen(port, hostname, ()=> {
+server.listen(port, ()=> {
   console.log(`http://${hostname}:${port}/`)
 });
 
